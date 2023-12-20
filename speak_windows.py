@@ -5,7 +5,7 @@ from os import system
 
 #function to use as a module:
 def speak(text_to_speak, gender): #change linux to windows if you want
-    cmd = "echo '{}' | ./windows\\piper.exe --model linux/hu_HU-{}-medium.onnx --output_file test.wav".format(text_to_speak, gender)
+    cmd = "echo '{}' | windows\\piper.exe --model linux/hu_HU-{}-medium.onnx --output_file test.wav".format(text_to_speak, gender)
     system(cmd)
     system("windows\\vlc\\vlc.exe test.wav --play-and-exit --qt-start-minimized")
 
